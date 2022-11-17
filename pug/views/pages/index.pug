@@ -1,0 +1,22 @@
+doctype html
+html
+    include ../partials/head.pug
+    body
+        include ../partials/header.pug
+        main
+            h2 Productos
+            table(class="table table-dark")
+                thead
+                    tr
+                        th ID
+                        th Título
+                        th Precio
+                        th Imágen 
+                tbody
+                    each product in products
+                        tr
+                            td= product.id
+                            td= product.title
+                            td= product.price
+                            td= product.thumbnail
+        include ../partials/footer
